@@ -42,7 +42,11 @@ img { max-width:100%; } ul { margin:12px 0 20px; padding-left:25px; } li { paddi
 .person h3 { font-size:14px; font-weight:600; margin:0; line-height:1.5; }
 .person h3 a { color:#303744; } .person h3 a:hover { color:var(--accent); }
 .affiliation { font-size:12px; color:var(--muted); margin:5px 0 0; line-height:1.6; }
-.speakers { gap:28px; margin-bottom:8px; } .speakers .person { width:calc((100% - 84px) / 4); }
+.speakers { max-width:800px; margin:28px auto 4px; gap:34px 28px; }
+.speakers .person { width:calc((100% - 84px) / 4); }
+.speakers .person-portrait { width:120px; height:120px; margin-bottom:12px; }
+.speakers .person h3 { font-size:15px; }
+.speakers .affiliation { margin-top:6px; line-height:1.6; text-wrap:balance; }
 .organizers { gap:32px 28px; } .organizers .person { width:172px; }
 .organizers .person-portrait { width:106px; height:106px; } .organizers .person h3 { font-size:15px; }
 .table-wrap { width:100%; overflow-x:auto; }
@@ -79,6 +83,7 @@ footer { text-align:center; font-size:12px; color:var(--muted); padding:20px 24p
 .credits h1 { color:#243d62; font-size:30px; } .credits h2 { font-size:23px; text-align:left; margin:30px 0 15px; }
 .credits p,.credits li { font-size:14px; } .back-link { display:inline-block; margin-bottom:15px; }
 @media(max-width:1100px) {
+  .speakers .person h3 { font-size:14px; }
   .organizers .person { width:calc((100% - 84px) / 4); }
   .workshop-header h1 { font-size:38px; }
 }
@@ -104,7 +109,7 @@ footer { text-align:center; font-size:12px; color:var(--muted); padding:20px 24p
   .people { gap:26px 18px; } .speakers .person { width:calc((100% - 36px) / 3); }
   .person-portrait { width:100px; height:100px; }
   .organizers .person { width:calc((100% - 36px) / 3); } .organizers .person-portrait { width:94px; height:94px; }
-  .person h3,.organizers .person h3 { font-size:13px; } .affiliation { font-size:11px; }
+  .person h3,.speakers .person h3,.organizers .person h3 { font-size:13px; } .affiliation { font-size:11px; }
   .schedule { min-width:595px; font-size:13px; } .schedule th:first-child { width:115px; } .schedule th:last-child { width:155px; }
   .schedule tbody th { font-size:12px; } thead th,tbody td,tbody th { padding:11px 12px; }
   .dates { font-size:13px; } .dates td { width:145px; }
